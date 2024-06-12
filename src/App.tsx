@@ -2,40 +2,16 @@
 
 import "./App.css";
 import ProductCard from "./components/ProductCard";
+import { productList } from "./data/data";
 
 function App() {
+  // Renders
+  const renderProductsList = productList.map((product) => (
+    <ProductCard key={product.id} product={product} />
+  ));
   return (
     <div className="m-5 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 ">
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
+      {renderProductsList}
     </div>
   );
 }
