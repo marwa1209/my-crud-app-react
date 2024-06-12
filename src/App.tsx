@@ -10,9 +10,9 @@ function App() {
     <ProductCard key={product.id} product={product} />
   ));
   return (
-    <div className="m-5 grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 ">
+    <main className="grid grid-cols-1 gap-4 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 container  py-5 ">
       {renderProductsList}
-    </div>
+    </main>
   );
 }
 
